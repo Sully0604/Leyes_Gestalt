@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leyes de Percepción de la Gestalt</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .law-card {
+            height: 100%;
+        }
+        .image-modal .modal-body {
+            text-align: center;
+        }
+        .image-modal img {
+            max-width: 100%;
+            max-height: 70vh;
+        }
+    </style>
+</head>
+<body>
+    <div class="container my-5">
+        <h1 class="text-center mb-4">Leyes de Percepción de la Gestalt</h1>
+        
+        <div class="row mb-5">
+            <div class="col-lg-8 mx-auto">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Introducción a las Leyes de la Gestalt</h5>
+                        <p class="card-text">
+                            Las leyes de percepción de la Gestalt son principios de la psicología de la forma desarrollados en la década de 1920 por psicólogos alemanes. Estas leyes describen cómo la mente humana organiza y percibe la información visual.
+                        </p>
+                        <p class="card-text">
+                            El principio fundamental de la Gestalt es que el todo es diferente a la suma de sus partes. Es decir, percibimos los objetos como un todo bien organizado, más que como partes separadas. Estas leyes explican cómo agrupamos elementos similares, completamos información faltante y separamos objetos de su fondo.
+                        </p>
+                        <p class="card-text">
+                            Comprender estas leyes es crucial en campos como el diseño, la publicidad y la psicología, ya que nos ayudan a crear y analizar composiciones visuales efectivas y a entender mejor cómo las personas interpretan la información visual.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="text-center mb-4">Leyes Específicas</h2>
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+            <div class="col">
+                <div class="card law-card">
+                    <div class="card-body">
+                        <h5 class="card-title">Ley de Cierre</h5>
+                        <p class="card-text">Nuestra mente tiende a cerrar o completar figuras incompletas para percibir una forma completa.</p>
+                        <button class="btn btn-primary" onclick="showImage('cierre.jpg', 'Ejemplo de Ley de Cierre')">Ver ejemplo</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card law-card">
+                    <div class="card-body">
+                        <h5 class="card-title">Ley de Continuidad</h5>
+                        <p class="card-text">Percibimos elementos continuos aunque estén interrumpidos entre sí.</p>
+                        <button class="btn btn-primary" onclick="showImage('continuidad.jpg', 'Ejemplo de Ley de Continuidad')">Ver ejemplo</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card law-card">
+                    <div class="card-body">
+                        <h5 class="card-title">Ley de Similitud</h5>
+                        <p class="card-text">Agrupamos elementos similares en una entidad. La similitud depende de la forma, tamaño, color y otros aspectos visuales de los elementos.</p>
+                        <button class="btn btn-primary" onclick="showImage('simil.jpg', 'Ejemplo de Ley de Similitud')">Ver ejemplo</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card law-card">
+                    <div class="card-body">
+                        <h5 class="card-title">Ley de Proximidad</h5>
+                        <p class="card-text">Tendemos a percibir como un grupo único los elementos que están cerca entre sí.</p>
+                        <button class="btn btn-primary" onclick="showImage('proximidad.jpg', 'Ejemplo de Ley de Proximidad')">Ver ejemplo</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card law-card">
+                    <div class="card-body">
+                        <h5 class="card-title">Ley de Figura y Fondo</h5>
+                        <p class="card-text">Nuestra percepción separa los elementos en figura (primer plano) y fondo.</p>
+                        <button class="btn btn-primary" onclick="showImage('figfondo.jpg', 'Ejemplo de Ley de Figura y Fondo')">Ver ejemplo</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card law-card">
+                    <div class="card-body">
+                        <h5 class="card-title">Ley de Simetría</h5>
+                        <p class="card-text">Percibimos los elementos simétricos como un solo grupo, independientemente de su distancia.</p>
+                        <button class="btn btn-primary" onclick="showImage('simetria.jpg', 'Ejemplo de Ley de Simetría')">Ver ejemplo</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card law-card">
+                    <div class="card-body">
+                        <h5 class="card-title">Ley de Pregnancia</h5>
+                        <p class="card-text">Organizamos nuestras percepciones de la manera más simple posible. Tendemos a percibir las formas más simples, regulares y estables.</p>
+                        <button class="btn btn-primary" onclick="showImage('pregnancia.jpg', 'Ejemplo de Ley de Pregnancia')">Ver ejemplo</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade image-modal" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="imageModalLabel">Ejemplo</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="" alt="Ejemplo" id="modalImage">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function showImage(imageSrc, title) {
+            const modal = new bootstrap.Modal(document.getElementById('imageModal'));
+            document.getElementById('imageModalLabel').textContent = title;
+            document.getElementById('modalImage').src = imageSrc;
+            modal.show();
+        }
+    </script>
+</body>
+</html>
